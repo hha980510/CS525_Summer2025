@@ -24,7 +24,6 @@ void testSinglePageContent(void) {
 
     ph = (SM_PageHandle) malloc(PAGE_SIZE);
 
-    // 👇 테스트 파일이 존재하지 않을 경우를 대비해 명시적으로 생성
     remove(TESTPF);
     TEST_CHECK(createPageFile(TESTPF));
     TEST_CHECK(openPageFile(TESTPF, &fh));

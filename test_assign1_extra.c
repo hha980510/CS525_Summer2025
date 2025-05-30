@@ -32,7 +32,7 @@ static void testAppendAndEnsureCapacity() {
     TEST_CHECK(ensureCapacity(5, &fh));
     ASSERT_EQUALS_INT(5, fh.totalNumPages, "Page count should be 5 after ensureCapacity");
 
-    // Try ensureCapacity to a smaller value (should remain unchanged)
+    // Try ensureCapacity to a smaller value
     TEST_CHECK(ensureCapacity(3, &fh));
     ASSERT_EQUALS_INT(5, fh.totalNumPages, "Page count should remain 5 after ensureCapacity(3)");
 
